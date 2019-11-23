@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
     @student.last_name = params[:student][:last_name]
     @student.save
     
-    redirect_to "/students/#{@student.id}"
+    redirect_to post_path(post)
   end
 
   def create
