@@ -1,7 +1,10 @@
 <!-- Create your form here -->
-<form action="/students" method="POST">
-  <input type="text" name="student[first_name]">
-  <input type="text" name="student[last_name]">
-  
-  <input type="submit" value="Submit">
-</form>
+<%= form_tag students_path do %>
+  <label>Student first_name:</label><br>
+  <%= text_field_tag :first_name %><br>
+
+  <label>Last_name:</label><br>
+  <%= text_field_tag :last_name %><br>
+
+  <%= submit_tag "Submit" %>
+<% end %>
